@@ -1,12 +1,7 @@
 
-
-
 provider "github" {
   owner = "Pavithra2294"
 }
-
-
-
 
 resource "github_repository" "demo_repo11" {
   name        = "my-terraform-created-repo-demo1111"
