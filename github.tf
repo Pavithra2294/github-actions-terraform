@@ -6,6 +6,8 @@ provider "github" {
 }
 
 
+
+
 resource "github_repository" "demo_repo11" {
   name        = "my-terraform-created-repo-demo1111"
   description = "This repository was created using Terraform!"
