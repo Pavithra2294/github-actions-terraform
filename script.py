@@ -20,7 +20,7 @@ job.init(args['JOB_NAME'], args)
 # Script generated for node AWS Glue Data Catalog
 AWSGlueDataCatalog_node = glueContext.create_dynamic_frame.from_catalog(
     database="org-report", 
-    table_name="tutorial_source_data_bucket", 
+    table_name="source-data-bucket-pre-finance", 
     transformation_ctx="AWSGlueDataCatalog_node"
     )
 
@@ -45,9 +45,10 @@ AmazonS3_node = glueContext.write_dynamic_frame.from_options(
     connection_type="s3", 
     format="csv", 
     connection_options={
-        "path": "s3://tutorial-target-data-bucket", 
+        "path": "s3://target-data-bucket-pre-finance", 
         "partitionKeys": []}, 
         transformation_ctx="AmazonS3_node"
         )
+
 
 job.commit()
