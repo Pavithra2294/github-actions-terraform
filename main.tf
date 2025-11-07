@@ -6,6 +6,7 @@ resource "aws_s3_bucket" "example" {
   bucket = "pavithra-terraform-demo-bucket2"
 }
 
+
 # S3 Bucket for Source Data
 resource "aws_s3_bucket" "source-data-bucket" {
   bucket        = "source-data-bucket"
