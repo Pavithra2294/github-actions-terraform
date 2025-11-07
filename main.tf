@@ -15,15 +15,3 @@ resource "aws_s3_bucket" "target-data-bucket-pre-finance" {
   force_destroy = true
 }
 
-
-resource "aws_s3_bucket" "code-bucket-pre-finance" {
-  bucket = "code-bucket-pre-finance" 
-  acl    = "private"
-}
-
-
-resource "aws_s3_object" "script_file-pre-finance" {
-  bucket = aws_s3_bucket.code-bucket-pre-finance.id
-  key    = "script.py"           
-  source = "script.py"  
-}
