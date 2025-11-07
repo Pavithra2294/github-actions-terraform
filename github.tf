@@ -5,8 +5,8 @@ provider "github" {
 
 
 
-resource "github_repository" "demo_repo11" {
-  name        = "my-terraform-created-repo-demo1111"
+resource "github_repository" "demo_repo_pre" {
+  name        = "my-terraform-created-repo-pre-demo"
   description = "This repository was created using Terraform!"
   visibility  = "public"    # or "private"
   auto_init   = true        # creates an initial commit with README
